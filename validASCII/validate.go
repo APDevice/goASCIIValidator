@@ -1,14 +1,14 @@
 /* validASCII includes a number of tools for comparing imput to the ASCII standard.
 This library was made for the purpose of checking whether a URL or email address has been
-spoofed using a common trick of replacing english characters with similar-looking unicode ones */
+spoofed using a common trick of replacing latin characters with similar-looking unicode ones */
 package validASCII
 
 type charRange rune
 
 const (
-	// includes all English characters
+	// includes all basic latin characters and other symbols commonly used in English
 	Standard charRange = 127
-	// Includes accented characters used in many European languages (also known as latin-1 suplimemt of the unicode standard)
+	// Includes accented characters used in many European languages (aka latin-1 supplement of the unicode standard)
 	Extended charRange = 255
 )
 
