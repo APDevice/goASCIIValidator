@@ -3,13 +3,13 @@ This library was made for the purpose of checking whether a URL or email address
 spoofed using a common trick of replacing latin characters with similar-looking unicode ones */
 package validASCII
 
-type charRange rune
+type CharRange rune
 
 const (
 	// includes all basic latin characters and other symbols commonly used in English
-	Standard charRange = 127
+	Standard CharRange = 127
 	// Includes accented characters used in many European languages (aka latin-1 supplement of the unicode standard)
-	Extended charRange = 255
+	Extended CharRange = 255
 )
 
 /* Validate checks whether all characters in a string are valid ASCII characters
@@ -20,7 +20,7 @@ Parameters:
 Output:
 	- boolean value (true if all characters are ASCII, else false)
 */
-func Validate(str string, asciiSet charRange) bool {
+func Validate(str string, asciiSet CharRange) bool {
 	for _, char := range str {
 		if char > rune(asciiSet) {
 			return false
@@ -38,7 +38,7 @@ Parameters:
 Output:
 	- int representing the total number of non-ASCII characters
 */
-func CountNonASCII(str string, asciiSet charRange) int {
+func CountNonASCII(str string, asciiSet CharRange) int {
 	var cnt int
 	for _, char := range str {
 		if char > rune(asciiSet) {
@@ -57,7 +57,7 @@ Parameters:
 Output:
 	- int representing the total number of ASCII characters
 */
-func CountASCII(str string, asciiSet charRange) int {
+func CountASCII(str string, asciiSet CharRange) int {
 
 	var cnt int
 	for _, char := range str {
