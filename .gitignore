@@ -1,2 +1,5 @@
 bin/asciiValidator
-main
+bin/asciiValidator.exe
+bin/asciiValidator.linux
+bin/asciiValidator.linux.zip
+.DS_Store
