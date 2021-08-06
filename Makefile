@@ -7,4 +7,6 @@ run:
 	go run $(FILES) $(ARGS)
 
 build:
-	go build -o $(PROG_NAME) $(FILES)
+	GOOS=linux GOARCH=amd64 go build -o bin/$(PROG_NAME).linux $(FILES)
+	GOOS=windows GOARCH=amd64 go build -o bin/$(PROG_NAME).exe $(FILES)
+	GOOS=darwin GOARCH=amd64 go build -o bin/$(PROG_NAME) $(FILES)
