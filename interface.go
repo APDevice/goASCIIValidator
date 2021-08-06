@@ -1,3 +1,9 @@
+/*
+
+
+Description: a simple ASCII validator. It will take in strings from stdio and validate that all characters fall within the ASCII range (7-bit characters by default). This progam can be used to verify that urls and email addresses have not been spoofed using non-latin characters. The "validASCII" validator itself can also be used independently if so desired (see validASCII directory).
+*/
+
 package main
 
 import (
@@ -8,7 +14,7 @@ import (
 	"github.com/APDevice/goASCIIValidator/validASCII"
 )
 
-/* checkStrings runs through all inputed strings, checks their validity, and outputs result
+/* checkStrings: runs through all inputed strings, checks their validity, and outputs result
 
 Parameters:
 	- array of strings to parse
@@ -46,6 +52,8 @@ func checkStringsConcise(strs []string, charRange validASCII.CharRange) {
 	}
 	fmt.Print("\n")
 }
+
+// Main function
 func main() {
 	checkExtended := flag.Bool("e", false, "check string against the extended ASCII range")
 	printConcise := flag.Bool("c", false, "generate a concise ouput for each string of 1 for valid, 0 for invalid")
