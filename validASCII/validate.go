@@ -1,6 +1,11 @@
-/* validASCII includes a number of tools for comparing imput to the ASCII standard.
-This library was made for the purpose of checking whether a URL or email address has been
-spoofed using a common trick of replacing latin characters with similar-looking unicode ones */
+/*
+	Project: validASCII
+	Author: Dylan Luttrell
+	License: GNU GPLv3
+	Description: validASCII includes a number of tools for comparing imput to the ASCII standard.
+	This library was made for the purpose of checking whether a URL or email address has been
+	spoofed using a common trick of replacing latin characters with similar-looking unicode ones
+*/
 package validASCII
 
 type CharRange rune
