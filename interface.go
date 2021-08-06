@@ -1,9 +1,9 @@
 /*
-
-
-Description: a simple ASCII validator. It will take in strings from stdio and validate that all characters fall within the ASCII range (7-bit characters by default). This progam can be used to verify that urls and email addresses have not been spoofed using non-latin characters. The "validASCII" validator itself can also be used independently if so desired (see validASCII directory).
+	Project: asciiValidator
+	Author: Dylan Luttrell
+	License: GNU GPLv3
+	Description: Provides an interface for the validASCII library.
 */
-
 package main
 
 import (
