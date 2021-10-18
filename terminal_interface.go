@@ -12,7 +12,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/APDevice/goASCIIValidator/validASCII"
+	"./validASCII"
 )
 
 // checkErr exits with an error if error occurs
