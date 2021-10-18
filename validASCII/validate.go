@@ -8,6 +8,8 @@
 */
 package validASCII
 
+import "strings"
+
 type CharRange rune
 
 const (
@@ -33,6 +35,30 @@ func Validate(str string, asciiSet CharRange) bool {
 	}
 
 	return true
+}
+
+/* Mark checks whether all characters in a string are valid ASCII characters
+
+Parameters:
+	- String to be validated
+	- charRange representing the ASCII standard to check against (validASCII.Standard for 7-bit, validASCII.Extended for 8-bit)
+Output:
+	- boolean value (true if all characters are ASCII, else false)
+*/
+func Mark(str string, asciiSet CharRange) string {
+	var sb strings.Builder
+	sb.Grow(len(str))
+	markChar := '�'
+
+	for _, char := range str {
+		if char <= rune(asciiSet) {
+			sb.WriteRune(char)
+		} else {
+			sb.WriteRune(markChar)
+		}
+	}
+
+	return sb.String()
 }
 
 /* CountNonASCII counts the number of non-ASCII characters in a string
