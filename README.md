@@ -4,6 +4,8 @@ goASCIIValidator is a simple ASCII validator. It will take in strings from stdio
 ## Flags
 - -e : switch to the extended extended ASCII range (aka latin-1 supplement in the Unicode Standard)
 - -c : generate a more concise output consisting of 1 for any valid string, 0 for any invalid one.
+- -r : read from file X rather than stdin (use "-r input.txt")
+- -w : write to file X rather than stdout (us "-w output.txt")
 
 ## License
 GNU GPLv3
