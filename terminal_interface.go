@@ -14,6 +14,10 @@ import (
 	"github.com/APDevice/goASCIIValidator/validASCII"
 )
 
+func checkString(str string, charRange validASCII.CharRange) {
+
+}
+
 /* checkStrings: runs through all inputed strings, checks their validity, and outputs result
 
 Parameters:
@@ -62,7 +66,7 @@ func main() {
 
 	// check for insufficient arguments
 	if len(input) == 0 {
-		fmt.Fprintf(os.Stderr, "Insufficient arguments: minimum one string needed to parse")
+		fmt.Fprintf(os.Stderr, "Insufficient arguments: minimum one string needed to parse\n")
 		os.Exit(1)
 	}
 
