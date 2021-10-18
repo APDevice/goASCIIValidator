@@ -4,3 +4,6 @@ bin/asciiValidator.linux
 bin/asciiValidator.linux.zip
 .DS_Store
 asciiValidator
+test/main.go
+output.txt
+input.txt
