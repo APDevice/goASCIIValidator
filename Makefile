@@ -1,6 +1,6 @@
 .DEFAULT_GOAL = build
 PROG_NAME = asciiValidator
-FILES = interface.go
+FILES = terminal_interface.go
 ARGS = 
 
 run:
